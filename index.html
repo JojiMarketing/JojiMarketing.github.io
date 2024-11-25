@@ -3,92 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joji Marketing</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: url('img/joji.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-        }
-        header {
-            text-align: center;
-            padding: 50px 20px;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            letter-spacing: 3px;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
-        .work-preview {
-            margin: 40px 0;
-        }
-        .work-preview iframe {
-            width: 80%;
-            height: 400px;
-            border: 2px solid white;
-            border-radius: 10px;
-        }
-        .customers {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .customers img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .instagram-link {
-            display: inline-block;
-            margin: 20px 0;
-            padding: 10px 20px;
-            background-color: #E1306C;
-            color: white;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-        }
-        .instagram-link:hover {
-            background-color: #c1275b;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Joji 1  Marketing</title>
+    
 </head>
 <body>
-    <header>
-        <h1>Joji Marketing</h1>
-        <a href="https://www.instagram.com/joji_marketing" class="instagram-link" target="_blank">Follow Us on Instagram</a>
-    </header>
 
-    <div class="container">
-        <div class="work-preview">
-            <h2>Recent Work:</h2>
-            <iframe src="https://natsanc.netlify.app/" title="Website Preview"></iframe>
-        </div>
+<section class="hero">
+   <h1>Joji Marketing</h1>
+</section>
 
-        <div class="customers">
-            <h2>Our Customers:</h2>
-            <img src="img/ns.jpg" alt="Nature Sanctuary">
-        </div>
+<nav>
+    <div class="brand">☰</div>
+    <ul>
+        <li><a href="#work-preview">Work</a></li>
+        <li><a href="#customers">Customers</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container" id="work-preview">
+    <div class="work-preview">
+        <h2>Recent Work:</h2>
+        <iframe src="https://natsanc.netlify.app/" title="Website Preview"></iframe>
     </div>
 
-    <footer>
-        <p>© 2024 Joji Marketing. All Rights Reserved.</p>
-    </footer>
+    <div class="customers" id="customers">
+        <h2>Our Customers:</h2>
+        <img src="img/ns.jpg" alt="Nature Sanctuary">
+    </div>
+</div>
+
+<div class="contact-section" id="contact-section">
+    <h2>Contact Us</h2>
+    <a href="https://www.instagram.com/joji_mktg/" class="instagram-link" target="_blank">Follow Us on Instagram</a>
+</div>
+
+<footer>
+    <p>© 2024 Joji Marketing. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
