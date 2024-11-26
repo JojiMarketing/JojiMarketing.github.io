@@ -4,7 +4,7 @@ body, html {
   padding: 0;
   font-family: 'Roboto Mono', monospace;
   scroll-behavior: smooth; /* Enables smooth transitions */
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Container Setup */
@@ -14,42 +14,68 @@ body, html {
   scroll-snap-type: y mandatory; /* Enables scroll snapping */
   height: 100%;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Sections */
 section {
   scroll-snap-align: start;
-  height: 100vh;
+  height: 100vh; /* Full screen height */
+  width: 100%; /* Ensure each section takes full width */
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: flex-start; /* Align the content to the top */
   align-items: center;
-  color: white;
+  color: burlywood;
   text-align: center;
+  position: relative;
+  overflow: hidden; /* Ensures no horizontal overflow */
+  transition: transform 0.3s ease-out; /* Smooth transition for scaling */
+}
+
+/* Scaling sections to fit if they overflow horizontally */
+section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0.9); /* Default scale */
+  transform-origin: center;
+}
+
+/* Headings */
+section h2 {
+  margin-top: 0; /* Removes any extra margin at the top */
+  padding-top: 10px; /* Adds a small space from the top */
+  font-size: 2.5em;
 }
 
 /* Hero Section: 0–25% */
 #hero {
-  background-position: center top; /* 0% of the image */
+  background-position: center top; /* Top part of the image */
 }
 
 /* Description Section: 19–44% */
 #description {
-  background-position: center 19%;
+  background-position: center 19%; /* Middle portion of the image */
 }
 
 /* Our Work Section: 38–63% */
 #our-work {
-  background-position: center 38%;
+  background-position: center 38%; /* Middle portion of the image */
 }
 
 /* Clients Section: 57–82% */
 #clients {
-  background-position: center 57%;
+  background-position: center 57%; /* Bottom portion of the image */
 }
 
 /* Contact Section: 75–100% */
 #contact {
-  background-position: center bottom;
+  background-position: center bottom; /* Bottom part of the image */
 }
 
 /* Footer */
@@ -82,10 +108,12 @@ footer {
   background: wheat;
   border-radius: 10px;
   padding: 20px;
-  width: 70vw;
+  width: 30vw;
   height: 80vh;
   justify-self: center;
-
+  /* Ensuring cards don't overflow horizontally */
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .card iframe {
@@ -101,26 +129,27 @@ footer {
   border-radius: 50%;
 }
 
-/* Contact Form */
-#contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: 0 auto;
+#contact a {
+  text-decoration: none;
+  font-size: 1.4em;
+  margin: 0 10px;
+  color: wheat;
+  display: inline-block; /* Allows setting width and margin */
+  margin: 5px; /* Adds space between links */
+  white-space: normal;
 }
 
-#contact form input,
-#contact form textarea,
-#contact form button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
-
-#contact form button {
-  background-color: #007BFF;
-  color: white;
-  cursor: pointer;
+/* Blurred Textbox Styling */
+.blurred-textbox {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply the blur effect */
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  color: #fff; /* White text for contrast */
+  font-size: 1.2em;
+  text-align: center;
 }
