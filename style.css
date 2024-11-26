@@ -3,15 +3,15 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto Mono', monospace;
-  scroll-behavior: smooth; /* Enables smooth transitions */
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Container Setup */
 .background {
-  background: url('img/bord.jpeg') no-repeat center center; /* The main image */
-  background-size: cover; /* Ensures full coverage */
-  scroll-snap-type: y mandatory; /* Enables scroll snapping */
+  background: url('img/bord.jpeg') no-repeat center center;
+  background-size: cover;
+  scroll-snap-type: y mandatory;
   height: 100%;
   overflow-y: scroll;
   display: flex;
@@ -21,20 +21,19 @@ body, html {
 /* Sections */
 section {
   scroll-snap-align: start;
-  height: 100vh; /* Full screen height */
-  width: 100%; /* Ensure each section takes full width */
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column; /* Stack the content vertically */
-  justify-content: flex-start; /* Align the content to the top */
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   color: burlywood;
   text-align: center;
   position: relative;
-  overflow: hidden; /* Ensures no horizontal overflow */
-  transition: transform 0.3s ease-out; /* Smooth transition for scaling */
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
 }
 
-/* Scaling sections to fit if they overflow horizontally */
 section:after {
   content: "";
   position: absolute;
@@ -42,40 +41,25 @@ section:after {
   left: 0;
   right: 0;
   bottom: 0;
-  transform: scale(0.9); /* Default scale */
+  transform: scale(0.9);
   transform-origin: center;
 }
 
 /* Headings */
 section h2 {
-  margin-top: 0; /* Removes any extra margin at the top */
-  padding-top: 10px; /* Adds a small space from the top */
+  margin-top: 0;
+  padding-top: 10px;
   font-size: 2.5em;
 }
 
-/* Hero Section: 0–25% */
+/* Hero Section */
 #hero {
-  background-position: center top; /* Top part of the image */
+  background-position: center top;
 }
 
-/* Description Section: 19–44% */
-#description {
-  background-position: center 19%; /* Middle portion of the image */
-}
-
-/* Our Work Section: 38–63% */
-#our-work {
-  background-position: center 38%; /* Middle portion of the image */
-}
-
-/* Clients Section: 57–82% */
-#clients {
-  background-position: center 57%; /* Bottom portion of the image */
-}
-
-/* Contact Section: 75–100% */
-#contact {
-  background-position: center bottom; /* Bottom part of the image */
+/* Other Sections */
+#description, #our-work, #clients {
+  background-position: center;
 }
 
 /* Footer */
@@ -94,8 +78,11 @@ footer {
 
 /* Content Styling */
 .center-logo {
-  width: 200px;
-  height: auto;
+  width: 30vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .cards, .clients-list {
@@ -111,35 +98,38 @@ footer {
   width: 30vw;
   height: 80vh;
   justify-self: center;
-  /* Ensuring cards don't overflow horizontally */
   max-width: 100%;
   max-height: 100%;
-  margin-bottom: 40px; /* Add extra space below the card */
-
+  margin-bottom: 40px;
 }
-.card iframe {
+
+.card iframe, .card img {
   width: 100%;
-  height: 90%;
-  border: none;
+  height: 100%;
+  object-fit: cover;
   border-radius: 5px;
-  margin-bottom: 20px; /* Adds space below the iframe */
 }
 
-.card p {
-  margin-top: 20px; /* Adds space between iframe and text */
+.card iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
+
 .card a {
   text-decoration: none;
-  color: white;
-  display: inline-block; /* Allows setting width and margin */
-  margin: 5px; /* Adds space between links */
-  white-space: normal;
+  color: wheat;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  z-index: 10;
 }
 
-.client img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 #contact a {
@@ -147,22 +137,22 @@ footer {
   font-size: 1.4em;
   margin: 0 10px;
   color: wheat;
-  display: inline-block; /* Allows setting width and margin */
-  margin: 5px; /* Adds space between links */
+  display: inline-block;
+  margin: 5px;
   white-space: normal;
 }
 
 /* Blurred Textbox Styling */
 .blurred-textbox {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-  backdrop-filter: blur(10px); /* Apply the blur effect */
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 20px;
   width: 80%;
   max-width: 600px;
   margin: 20px auto;
-  color: #fff; /* White text for contrast */
+  color: #fff;
   font-size: 1.2em;
   text-align: center;
 }
