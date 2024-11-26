@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Joji Marketing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Webpage</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="section" id="header">
-        <img src="img/joji.png" alt="Joji Logo" class="logo">
-    </header>
-
-    <section class="section" id="about">
-        <p>
-            Nestled in the mist-kissed hills of Urumbikkara, Kerala, Nature Sanctuary is a 7000 sq ft wilderness retreat steeped in the British colonial legacy. 
-            Perched 2500 ft above sea level, Nature Sanctuary offers a serene escape with breathtaking views of valleys, waterfalls, and lush plantations of cardamom, pepper, vanilla, and tea.
-        </p>
-        <p>
-            This intimate hideaway offers a perfect blend of nature, luxury, and tranquility, making it an ideal destination for relaxation and adventure alike.
-        </p>
+  <div class="background">
+    <!-- Section 1: Centered Logo -->
+    <section id="hero">
+      <img src="img/joji.png" alt="Joji Logo" class="center-logo">
     </section>
 
-    <section class="section" id="work-preview">
-        <h2>Recent Work:</h2>
-        <iframe src="https://natsanc.netlify.app/" title="Website Preview"></iframe>
+    <!-- Section 2: Description with Side Images -->
+    <section id="description">
+      <div class="content">
+        <div class="image left">
+          <img src="img/sample1.jpeg" alt="Sample Image">
+        </div>
+        <div class="text">
+          <p>Paragraph describing the content. Include detailed explanations and key aspects of the services offered.</p>
+        </div>
+        <div class="image right">
+          <img src="img/sample2.jpeg" alt="Sample Image">
+        </div>
+      </div>
     </section>
 
-    <section class="section" id="customers">
-        <h2>Our Customers:</h2>
-        <img src="img/ns.jpg" alt="Nature Sanctuary">
+    <!-- Section 3: Samples of Work -->
+    <section id="samples">
+      <h2>Our Work</h2>
+      <div class="cards">
+        <!-- Sample Card 1 -->
+        <div class="card">
+          <iframe src="https://natsanc.netlify.app" frameborder="0" title="Sample Website"></iframe>
+        </div>
+        <!-- Sample Card 2 -->
+        <div class="card">
+          <h3>Clients</h3>
+          <div class="clients">
+            <div class="client">
+              <img src="img/client1.png" alt="Client Logo">
+              <p>Client 1</p>
+            </div>
+            <div class="client">
+              <img src="img/client2.png" alt="Client Logo">
+              <p>Client 2</p>
+            </div>
+            <!-- Add more clients as needed -->
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="section" id="contact">
-        <h2>Contact Us</h2>
-        <a href="https://www.instagram.com/joji_mktg/" target="_blank" class="instagram-link">Follow Us on Instagram</a>
+    <!-- Section 4: Contact Us -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </section>
 
-    <footer class="section" id="footer">
-        <p>© 2024 Joji Marketing. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer>
+      <p>Website by <img src="img/joji.png" alt="Joji Logo" class="footer-logo"></p>
     </footer>
+  </div>
 </body>
 </html>
