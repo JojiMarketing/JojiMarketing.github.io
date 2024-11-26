@@ -8,48 +8,49 @@ body, html {
   scroll-behavior: smooth;
 }
 
-/* Make the background image static and control positions */
+/* Base styling for all sections */
 section {
   position: relative;
-  min-height: 100vh; /* Each section takes up full screen */
+  min-height: 100vh; /* Full-screen sections */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url('img/bird.jpg') no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
+  background: url('img/bird.jpg') no-repeat;
+  background-size: 100% calc(100vh * 6); /* Height stretched to 6x viewport height */
+  background-attachment: fixed; /* Keeps the image fixed in place */
 }
 
+/* Specific positions for each section to reveal the correct slice */
 #section1 {
-  background-position: center top;
+  background-position: center 0%; /* First 1/6 of the image */
 }
 
 #section2 {
-  background-position: center 16.6%; /* Next 1/6th */
+  background-position: center 16.6667%; /* Second 1/6 of the image */
 }
 
 #section4 {
-  background-position: center 33.3%; /* Next 1/6th */
+  background-position: center 33.3333%; /* Third 1/6 of the image */
 }
 
 #section5 {
-  background-position: center 50%; /* Middle of the image */
+  background-position: center 50%; /* Fourth 1/6 of the image */
 }
 
 #section6 {
-  background-position: center 66.6%; /* Next 1/6th */
+  background-position: center 66.6667%; /* Fifth 1/6 of the image */
 }
 
 footer {
-  background-position: center bottom; /* Bottom of the image */
-  background: rgba(0, 0, 0, 0.7); /* Dark background for footer text */
+  background-position: center 83.3333%; /* Final 1/6 of the image */
+  background-color: rgba(0, 0, 0, 0.7); /* Overlay color for better readability */
   color: white;
   padding: 20px;
 }
 
-/* Center image in the first section */
+/* Styling for content in sections */
 .center-image {
   max-width: 200px;
   height: auto;

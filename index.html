@@ -3,53 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joji Marketing</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Precise Background Sections</title>
+    <style>
+        /* Reset and base styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Each section */
+        .section {
+            position: relative;
+            height: 100vh; /* Full viewport height for each section */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('img/bird.jpg') no-repeat center;
+            background-size: 100% 600vh; /* Stretch background image to 6x viewport height */
+        }
+
+        /* Define exact portions of the image for each section */
+        .section:nth-child(1) {
+            background-position: center 0%; /* First slice (0% to 16.66%) */
+        }
+        .section:nth-child(2) {
+            background-position: center 16.6667%; /* Second slice (16.66% to 33.33%) */
+        }
+        .section:nth-child(3) {
+            background-position: center 33.3333%; /* Third slice (33.33% to 50%) */
+        }
+        .section:nth-child(4) {
+            background-position: center 50%; /* Fourth slice (50% to 66.66%) */
+        }
+        .section:nth-child(5) {
+            background-position: center 66.6667%; /* Fifth slice (66.66% to 83.33%) */
+        }
+        .section:nth-child(6) {
+            background-position: center 83.3333%; /* Sixth slice (83.33% to 100%) */
+        }
+
+        /* Placeholder content inside each section */
+        .section img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
 </head>
 <body>
-    <section id="section1">
-        <img src="img/joji.png" alt="Joji Logo" class="center-image">
-    </section>
-    <section id="section2" class="about-us">
-        <div class="row ox">
-            <img src="img/about1.png" alt="About Us Image">
-            <p>Joji Marketing helps brands achieve...</p>
-        </div>
-        <div class="row xo">
-            <p>With years of experience...</p>
-            <img src="img/about2.png" alt="About Us Image">
-        </div>
-        <div class="row ox">
-            <img src="img/about3.png" alt="About Us Image">
-            <p>Our innovative strategies...</p>
-        </div>
-    </section>
-    <section id="section4">
-        <h2>Preview</h2>
-        <iframe src="https://natsanc.netlify.app" frameborder="0" class="preview"></iframe>
-    </section>
-    <section id="section5" class="customers">
-        <h2>Our Customers</h2>
-        <div class="row ox">
-            <img src="img/customer1.png" alt="Customer Image" class="circle">
-            <p>Customer testimonial 1...</p>
-        </div>
-        <div class="row xo">
-            <p>Customer testimonial 2...</p>
-            <img src="img/customer2.png" alt="Customer Image" class="circle">
-        </div>
-        <div class="row ox">
-            <img src="img/customer3.png" alt="Customer Image" class="circle">
-            <p>Customer testimonial 3...</p>
-        </div>
-    </section>
-    <section id="section6" class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:contact@joji.com">contact@joji.com</a></p>
-        <p>Instagram: <a href="https://instagram.com/joji_marketing" target="_blank">@joji_marketing</a></p>
-    </section>
-    <footer>
-        <p>Website by <img src="img/joji.png" alt="Joji Logo" class="footer-logo"></p>
-    </footer>
+    <!-- Create six sections -->
+    <div class="section">
+        <img src="img/joji.png" alt="Joji Placeholder">
+    </div>
+    <div class="section">
+        <img src="img/joji.png" alt="Joji Placeholder">
+    </div>
+    <div class="section">
+        <img src="img/joji.png" alt="Joji Placeholder">
+    </div>
+    <div class="section">
+        <img src="img/joji.png" alt="Joji Placeholder">
+    </div>
+    <div class="section">
+        <img src="img/joji.png" alt="Joji Placeholder">
+    </div>
+    <div class="section">
+        <img src="img/joji.png" alt="Joji Placeholder">
+    </div>
 </body>
 </html>
