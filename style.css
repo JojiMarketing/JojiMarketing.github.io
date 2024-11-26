@@ -9,7 +9,7 @@ body, html {
 
 /* Container Setup */
 .background {
-  background: url('img/bard.jpg') no-repeat center center; /* The main image */
+  background: url('img/bord.jpeg') no-repeat center center; /* The main image */
   background-size: cover; /* Ensures full coverage */
   scroll-snap-type: y mandatory; /* Enables scroll snapping */
   height: 100%;
