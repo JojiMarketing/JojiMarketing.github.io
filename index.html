@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image Slices</title>
-    <style>
-        /* Reset and base styles */
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Prevent unwanted scrollbars */
-        }
-
-        /* Wrapper to manage overall scroll */
-        .container {
-            height: 500vh; /* Total height (5x viewport height) */
-            background: url('img/bird.jpg') no-repeat center top;
-            background-size: 100% 500%; /* Stretch across 5 viewports */
-        }
-
-        /* Each section */
-        .section {
-            position: relative;
-            height: 100vh; /* Full viewport height for each section */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 2em;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Placeholder styling */
-        .section img {
-            max-width: 80%;
-            max-height: 80%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joji Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Wrapper to contain and align sections -->
-    <div class="container">
-        <div class="section">
-            <img src="img/joji.png" alt="Joji Placeholder">
+  <div class="background">
+    <!-- Hero Section -->
+    <section id="hero">
+      <img src="img/joji.png" alt="Joji Logo" class="center-logo">
+    </section>
+
+    <!-- Description Section -->
+    <section id="description">
+      <div class="content">
+        <div class="image left">
+          <img src="img/sample1.jpeg" alt="Sample Image">
         </div>
-        <div class="section">
-            <img src="img/joji.png" alt="Joji Placeholder">
+        <div class="text">
+          <p>Paragraph describing the content. Include detailed explanations and key aspects of the services offered.</p>
         </div>
-        <div class="section">
-            <img src="img/joji.png" alt="Joji Placeholder">
+        <div class="image right">
+          <img src="img/sample2.jpeg" alt="Sample Image">
         </div>
-        <div class="section">
-            <img src="img/joji.png" alt="Joji Placeholder">
+      </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section id="our-work">
+      <h2>Our Work</h2>
+      <div class="cards">
+        <div class="card">
+          <iframe src="https://natsanc.netlify.app" frameborder="0" title="Sample Website"></iframe>
         </div>
-        <div class="section">
-            <img src="img/joji.png" alt="Joji Placeholder">
+        <!-- Add more work samples as needed -->
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients">
+      <h2>Our Clients</h2>
+      <div class="clients-list">
+        <div class="client">
+          <img src="img/client1.png" alt="Client Logo">
+          <p>Client 1</p>
         </div>
-    </div>
+        <div class="client">
+          <img src="img/client2.png" alt="Client Logo">
+          <p>Client 2</p>
+        </div>
+        <!-- Add more clients as needed -->
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Website by <img src="img/joji.png" alt="Joji Logo" class="footer-logo"></p>
+    </footer>
+  </div>
 </body>
 </html>
