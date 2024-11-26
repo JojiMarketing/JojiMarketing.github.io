@@ -50,12 +50,11 @@ section {
 /* Contact Section: 75–100% */
 #contact {
   background-position: center bottom;
-  background-color: rgba(0, 0, 0, 0.7); /* Optional overlay for readability */
 }
 
 /* Footer */
 footer {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: wheat;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -81,10 +80,14 @@ footer {
 }
 
 .card {
-  background: #222;
+  background: wheat;
   border-radius: 10px;
   padding: 20px;
-  width: 300px;
+  width: 80vw;
+  height: 50vh;
+  
+
+  min-width: 300px;
   text-align: center;
 }
 
