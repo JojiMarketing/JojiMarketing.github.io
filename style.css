@@ -114,13 +114,26 @@ footer {
   /* Ensuring cards don't overflow horizontally */
   max-width: 100%;
   max-height: 100%;
-}
+  margin-bottom: 40px; /* Add extra space below the card */
 
+}
 .card iframe {
   width: 100%;
-  height: 100%;
+  height: 90%;
   border: none;
   border-radius: 5px;
+  margin-bottom: 20px; /* Adds space below the iframe */
+}
+
+.card p {
+  margin-top: 20px; /* Adds space between iframe and text */
+}
+.card a {
+  text-decoration: none;
+  color: white;
+  display: inline-block; /* Allows setting width and margin */
+  margin: 5px; /* Adds space between links */
+  white-space: normal;
 }
 
 .client img {
