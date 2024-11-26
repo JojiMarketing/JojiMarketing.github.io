@@ -115,6 +115,18 @@ footer {
   margin-bottom: 40px;
 }
 
+.short{
+  background: wheat;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30vw;
+  height: 45vh;
+  justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 40px;
+}
+
 .card iframe {
   width: 100%; /* Stretch to card's width */
   height: 90%; /* Stretch to card's height */
@@ -156,7 +168,7 @@ footer {
   text-decoration: none;
   font-size: 1.4em;
   margin: 0 10px;
-  color: wheat;
+  color: white;
   display: inline-block;
   margin: 5px;
   white-space: normal;
