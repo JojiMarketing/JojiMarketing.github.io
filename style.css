@@ -100,8 +100,8 @@ footer a {
 .center-logo {
   width: 30%;
   position: absolute; /* Position relative to the nearest positioned ancestor */
-  top: 0vh; /* Center vertically */
-  left: 0vw; /* Center horizontally */
+  top: 20vh; /* Center vertically */
+  left: 10vw; /* Center horizontally */
   display: flex; /* Ensures any content inside remains aligned */
   justify-content: center; /* Align horizontally */
   align-items: center; /* Align vertically */
