@@ -1,59 +1,64 @@
+/* General Reset */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Roboto, sans-serif;
-    color: #fff;
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    font-family: 'Roboto Mono', monospace;
+    scroll-behavior: smooth; /* Enables smooth transitions */
     overflow-x: hidden;
-    height: 100%;
   }
   
-  /* Scroll Snap Settings */
+  /* Container Setup */
   .background {
-    scroll-snap-type: y mandatory; /* Vertical scroll snap */
+    background: url('img/bird.jpeg') no-repeat center center; /* The main image */
+    background-size: cover; /* Ensures full coverage */
+    scroll-snap-type: y mandatory; /* Enables scroll snapping */
     height: 100%;
     overflow-y: scroll;
-    background: url('img/bird.jpeg') no-repeat center center fixed;
-    background-size: cover;
   }
   
+  /* Sections */
   section {
-    scroll-snap-align: start; /* Snap sections to the viewport */
-    height: 100vh; /* Each section takes full viewport height */
+    scroll-snap-align: start;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
     text-align: center;
   }
   
-  /* Section Background Positioning */
+  /* Hero Section: 0–25% */
   #hero {
-    background-position: center top; /* 0–25% */
+    background-position: center top; /* 0% of the image */
   }
   
+  /* Description Section: 19–44% */
   #description {
-    background-position: center 19%; /* 19–44% */
+    background-position: center 19%;
   }
   
+  /* Our Work Section: 38–63% */
   #our-work {
-    background-position: center 38%; /* 38–63% */
+    background-position: center 38%;
   }
   
+  /* Clients Section: 57–82% */
   #clients {
-    background-position: center 57%; /* 57–82% */
+    background-position: center 57%;
   }
   
+  /* Contact Section: 75–100% */
   #contact {
-    background-position: center bottom; /* 75–100% */
-    background-color: rgba(0, 0, 0, 0.8); /* Optional for better readability */
+    background-position: center bottom;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional overlay for readability */
   }
   
   /* Footer */
   footer {
-    text-align: center;
     background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-align: center;
     padding: 20px;
-    scroll-snap-align: start; /* Footer also snaps */
   }
   
   .footer-logo {
@@ -71,14 +76,16 @@ body, html {
   .cards, .clients-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
+    justify-content: center;
   }
   
-  .card, .client {
+  .card {
     background: #222;
     border-radius: 10px;
     padding: 20px;
+    width: 300px;
+    text-align: center;
   }
   
   .card iframe {
@@ -103,7 +110,9 @@ body, html {
     margin: 0 auto;
   }
   
-  #contact form input, #contact form textarea, #contact form button {
+  #contact form input,
+  #contact form textarea,
+  #contact form button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -112,6 +121,6 @@ body, html {
   
   #contact form button {
     background-color: #007BFF;
-    color: #fff;
+    color: white;
     cursor: pointer;
   }
