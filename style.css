@@ -76,13 +76,25 @@ footer {
   vertical-align: middle;
 }
 
+.center-logo-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  position: relative; /* Ensure the container itself is positioned */
+}
+
+
 /* Content Styling */
 .center-logo {
-  width: 30vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 30%;
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  top: 0; /* Center vertically */
+  left: 0; /* Center horizontally */
+  display: flex; /* Ensures any content inside remains aligned */
+  justify-content: center; /* Align horizontally */
+  align-items: center; /* Align vertically */
 }
 
 .cards, .clients-list {
@@ -103,11 +115,19 @@ footer {
   margin-bottom: 40px;
 }
 
-.card iframe, .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
+.card iframe {
+  width: 100%; /* Stretch to card's width */
+  height: 90%; /* Stretch to card's height */
+  object-fit: contain; /* Ensures the image fits without being cropped */
+  border: none; /* No border */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+.card img {
+  width: 100%; /* Stretch to card's width */
+  height: 100%; /* Stretch to card's height */
+  object-fit: contain; /* Ensures the image fits without cropping */
+  border-radius: 5px; /* Optional: rounded corners */
 }
 
 .card iframe:hover {
@@ -117,7 +137,7 @@ footer {
 
 .card a {
   text-decoration: none;
-  color: wheat;
+  color: white;
   display: inline-block;
   margin: 10px;
   position: relative;
