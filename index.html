@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Precise Background Sections</title>
+    <title>Background Image Slices</title>
     <style>
         /* Reset and base styles */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevent unwanted scrollbars */
+        }
+
+        /* Wrapper to manage overall scroll */
+        .container {
+            height: 500vh; /* Total height (5x viewport height) */
+            background: url('img/bird.jpg') no-repeat center top;
+            background-size: 100% 500%; /* Stretch across 5 viewports */
         }
 
         /* Each section */
@@ -20,31 +27,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url('img/bird.jpg') no-repeat center;
-            background-size: 100% 600vh; /* Stretch background image to 6x viewport height */
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        /* Define exact portions of the image for each section */
-        .section:nth-child(1) {
-            background-position: center 0%; /* First slice (0% to 16.66%) */
-        }
-        .section:nth-child(2) {
-            background-position: center 16.6667%; /* Second slice (16.66% to 33.33%) */
-        }
-        .section:nth-child(3) {
-            background-position: center 33.3333%; /* Third slice (33.33% to 50%) */
-        }
-        .section:nth-child(4) {
-            background-position: center 50%; /* Fourth slice (50% to 66.66%) */
-        }
-        .section:nth-child(5) {
-            background-position: center 66.6667%; /* Fifth slice (66.66% to 83.33%) */
-        }
-        .section:nth-child(6) {
-            background-position: center 83.3333%; /* Sixth slice (83.33% to 100%) */
-        }
-
-        /* Placeholder content inside each section */
+        /* Placeholder styling */
         .section img {
             max-width: 80%;
             max-height: 80%;
@@ -52,24 +41,23 @@
     </style>
 </head>
 <body>
-    <!-- Create six sections -->
-    <div class="section">
-        <img src="img/joji.png" alt="Joji Placeholder">
-    </div>
-    <div class="section">
-        <img src="img/joji.png" alt="Joji Placeholder">
-    </div>
-    <div class="section">
-        <img src="img/joji.png" alt="Joji Placeholder">
-    </div>
-    <div class="section">
-        <img src="img/joji.png" alt="Joji Placeholder">
-    </div>
-    <div class="section">
-        <img src="img/joji.png" alt="Joji Placeholder">
-    </div>
-    <div class="section">
-        <img src="img/joji.png" alt="Joji Placeholder">
+    <!-- Wrapper to contain and align sections -->
+    <div class="container">
+        <div class="section">
+            <img src="img/joji.png" alt="Joji Placeholder">
+        </div>
+        <div class="section">
+            <img src="img/joji.png" alt="Joji Placeholder">
+        </div>
+        <div class="section">
+            <img src="img/joji.png" alt="Joji Placeholder">
+        </div>
+        <div class="section">
+            <img src="img/joji.png" alt="Joji Placeholder">
+        </div>
+        <div class="section">
+            <img src="img/joji.png" alt="Joji Placeholder">
+        </div>
     </div>
 </body>
 </html>
