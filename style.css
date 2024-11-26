@@ -69,12 +69,22 @@ footer {
   text-align: center;
   padding: 20px;
 }
+footer a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  z-index: 10;
+}
 
 .footer-logo {
   width: 50px;
   height: auto;
   vertical-align: middle;
 }
+
+
 
 .center-logo-container {
   display: flex;
@@ -90,8 +100,8 @@ footer {
 .center-logo {
   width: 30%;
   position: absolute; /* Position relative to the nearest positioned ancestor */
-  top: 0; /* Center vertically */
-  left: 0; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
   display: flex; /* Ensures any content inside remains aligned */
   justify-content: center; /* Align horizontally */
   align-items: center; /* Align vertically */
