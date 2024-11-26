@@ -21,7 +21,7 @@ body, html {
 /* Sections */
 section {
   scroll-snap-align: start;
-  height: 100vh;
+  min-height: 100vh;
   min-width: 100%;
   display: flex;
   flex-direction: column;
@@ -113,17 +113,24 @@ footer a {
   gap: 20px;
 }
 
+
 .card {
   background: wheat;
   border-radius: 10px;
   padding: 20px;
-  width: 45vw;
+  width: 40vw;
   height: 80vh;
   justify-self: center;
   max-width: 100%;
   max-height: 100%;
   margin-bottom: 40px;
 }
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .cards {
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 20px;
+  }
 
 .short{
   background: wheat;
