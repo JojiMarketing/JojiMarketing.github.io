@@ -198,3 +198,61 @@ footer a {
   font-size: 1.2em;
   text-align: center;
 }
+
+
+/* Hamburger Menu Styling */
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.menu-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+}
+
+.menu-dropdown a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.menu-dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Show the dropdown when active */
+.menu.active .menu-dropdown {
+  display: flex;
+}

@@ -8,6 +8,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="menu">
+    <button class="menu-button">
+      ☰
+    </button>
+    <div class="menu-dropdown">
+      <a href="#description">Description</a>
+      <a href="#our-work">Our Work</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
   <div class="background">
     <!-- Hero Section -->
    <!-- Centered Logo -->
@@ -74,4 +86,10 @@
     </footer>
   </div>
 </body>
+<script>
+  document.querySelector('.menu-button').addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+  });
+</script>
 </html>
