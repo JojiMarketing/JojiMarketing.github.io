@@ -76,7 +76,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
 }
 
 .card {
@@ -85,7 +84,8 @@ footer {
   padding: 20px;
   width: 70vw;
   height: 80vh;
-    text-align: center;
+  justify-self: center;
+
 }
 
 .card iframe {
