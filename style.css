@@ -126,13 +126,6 @@ footer a {
   margin-bottom: 40px;
 }
 
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
-  .cards {
-    flex-direction: column; /* Stack the cards vertically */
-    gap: 20px;
-  }
-}
-
 .short{
   background: wheat;
   border-radius: 10px;
@@ -144,6 +137,18 @@ footer a {
   max-height: 100%;
   margin-bottom: 40px;
 }
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .cards {
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 20px;
+  }
+  .card {
+    width: 70vw;
+  }
+}
+
+
 
 .card iframe {
   width: 100%; /* Stretch to card's width */
