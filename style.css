@@ -9,10 +9,10 @@ body, html {
 
 /* Container Setup */
 .background {
-  background: url('img/bord.jpeg') no-repeat center center;
+  background: url('img/beerd.jpeg') no-repeat center center;
   background-size: cover;
   scroll-snap-type: y mandatory;
-  height: 100%;
+  width: 100%;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -185,6 +185,7 @@ footer a {
   justify-content: center;
   align-items: center;
   height: 100%;
+  background-color: wheat;
 }
 
 #contact a {
