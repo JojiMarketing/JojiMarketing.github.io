@@ -98,7 +98,7 @@ footer a {
 
 /* Content Styling */
 .center-logo {
-  width: 20%;
+  width: 15%;
   position: absolute; /* Position relative to the nearest positioned ancestor */
   top: 25vh; /* Center vertically */
   left: 35vw; /* Center horizontally */
@@ -144,6 +144,15 @@ footer a {
   }
   .card {
     width: 70vw;
+  }
+  .center-logo {
+    width: 35%;
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    top: 35vh; /* Center vertically */
+    left: 35vw; /* Center horizontally */
+    display: flex; /* Ensures any content inside remains aligned */
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
   }
 }
 
