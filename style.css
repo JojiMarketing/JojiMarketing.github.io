@@ -186,6 +186,7 @@ footer a {
   align-items: center;
   height: 100%;
   background-color: wheat;
+  font-weight: bold;
 }
 
 #contact a {
@@ -196,6 +197,7 @@ footer a {
   display: inline-block;
   margin: 5px;
   white-space: normal;
+  font-weight: bold;
 }
 
 /* Blurred Textbox Styling */
