@@ -98,10 +98,10 @@ footer a {
 
 /* Content Styling */
 .center-logo {
-  width: 30%;
+  width: 20%;
   position: absolute; /* Position relative to the nearest positioned ancestor */
   top: 25vh; /* Center vertically */
-  left: 25vw; /* Center horizontally */
+  left: 35vw; /* Center horizontally */
   display: flex; /* Ensures any content inside remains aligned */
   justify-content: center; /* Align horizontally */
   align-items: center; /* Align vertically */
@@ -137,7 +137,7 @@ footer a {
   background: wheat;
   border-radius: 10px;
   padding: 20px;
-  width: 35vw;
+  width: 20vw;
   height: 45vh;
   justify-self: center;
   max-width: 100%;
@@ -195,7 +195,7 @@ footer a {
 /* Blurred Textbox Styling */
 .blurred-textbox {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 20px;
