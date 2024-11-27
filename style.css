@@ -100,8 +100,8 @@ footer a {
 .center-logo {
   width: 30%;
   position: absolute; /* Position relative to the nearest positioned ancestor */
-  top: 20vh; /* Center vertically */
-  left: 10vw; /* Center horizontally */
+  top: 25vh; /* Center vertically */
+  left: 25vw; /* Center horizontally */
   display: flex; /* Ensures any content inside remains aligned */
   justify-content: center; /* Align horizontally */
   align-items: center; /* Align vertically */
@@ -131,6 +131,7 @@ footer a {
     flex-direction: column; /* Stack the cards vertically */
     gap: 20px;
   }
+}
 
 .short{
   background: wheat;
